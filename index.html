@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Appointment Booking</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="main-bg-video">
+    <source src="assets/265319_medium.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1 class="title">Smart Appointment Booking</h1>
+
+<div id="successMessage" class="success-message">
+    Appointment Booked Successfully 🎉
+</div>
+
+<div class="card">
+<form id="appointmentForm" novalidate>
+
+    <div class="input-group">
+        <input type="text" id="name">
+        <label>Full Name</label>
+        <small class="error" id="nameError"></small>
+    </div>
+
+    <div class="input-group">
+        <input type="email" id="email">
+        <label>Email</label>
+        <small class="error" id="emailError"></small>
+    </div>
+
+    <div class="input-group">
+        <select id="service">
+            <option value="">Select Service</option>
+            <option>Consultation</option>
+            <option>Dental</option>
+            <option>Eye Specialist</option>
+        </select>
+        <small class="error" id="serviceError"></small>
+    </div>
+
+    <div class="input-group">
+        <input type="date" id="date">
+        <small class="error" id="dateError"></small>
+    </div>
+
+    <h3>Select Time Slot</h3>
+    <small class="error" id="slotError"></small>
+
+    <div class="slots">
+        <button type="button" class="slot">10:00 AM</button>
+        <button type="button" class="slot">11:00 AM</button>
+        <button type="button" class="slot">12:00 PM</button>
+        <button type="button" class="slot">2:00 PM</button>
+    </div>
+
+    <button type="submit" class="btn">Book Appointment</button>
+
+</form>
+</div>
+
+<div class="dashboard-section">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/133898-758336558_medium.mp4" type="video/mp4">
+    </video>
+
+    <div class="dashboard-content">
+        <h2>Booked Appointments</h2>
+        <ul id="appointmentList"></ul>
+    </div>
+</div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
